@@ -35,18 +35,7 @@ namespace Parcial3
         {
             return nodos.Find(v => v.Valor == valor.ToString());
         }
-        //Crea una arista a partir de los valores de los nodos de origen y de destino
-        public bool AgregarArco(string origen, string nDestino, int peso = 1)
-        {
-            CVertice vOrigen, vnDestino;
-
-            //Si alguno de los nodos no existe, se activa una excepción
-            if ((vOrigen = nodos.Find(v => v.Valor == origen)) == null)
-                throw new Exception("El nodo " + origen + " no existe dentro del grafo");
-            if ((vnDestino = nodos.Find(v => v.Valor == nDestino)) == null)
-                throw new Exception("El nodo " + nDestino + " no existe dentro del grafo");
-            return AgregarArco(vOrigen, vnDestino);
-        }
+       
         // Crea la arista a partir de los nodos de origen y de destino
         public bool AgregarArco(CVertice origen, CVertice nDestino, int peso = 1)
         {

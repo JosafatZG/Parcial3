@@ -242,6 +242,7 @@ namespace Parcial3
 
         private void button4_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
             if (cmbinicio.SelectedIndex > -1)
             {
                 profundidad = true;
@@ -257,6 +258,7 @@ namespace Parcial3
 
         private void button3_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
             if (cmbinicio.SelectedIndex > -1)
             {
                 origen = cmbinicio.SelectedItem.ToString();
@@ -290,6 +292,11 @@ namespace Parcial3
             nuevoNodo = new CVertice();
             var_control = 2; // recordemos que es usado para indicar el estado en la pizarra: 0 ->
             // sin accion, 1 -> Dibujando arco, 2 -> Nuevo vértice
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
@@ -350,7 +357,7 @@ namespace Parcial3
                         }
                         else
                         {
-                            MessageBox.Show("Nodo {0} ya existente" + ventanaVertice.valor, "YA EXISTE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Nodo " + ventanaVertice.valor + " ya existente", "YA EXISTE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                     }
                     nuevoNodo = null;
@@ -408,7 +415,13 @@ namespace Parcial3
             vertice.DibujarVertice(g);
             foreach (CArista adya in vertice.ListaAdyacencia)
             {
-                if (!adya.nDestino.Visitado) recorridoProfundidad(adya.nDestino, g);
+                if (!adya.nDestino.Visitado)
+                {
+                    /**************
+                    **************/
+                    listBox1.Items.Add(adya.nDestino.Valor);
+                    recorridoProfundidad(adya.nDestino, g);
+                }
             }
         }
 
@@ -437,8 +450,12 @@ namespace Parcial3
                         {
                             adya.nDestino.Visitado = true;
                             adya.nDestino.colorear(g);
+                            /**************
+                            **************/
+                            listBox1.Items.Add(adya.nDestino.Valor);
                             Thread.Sleep(1000);
                             adya.nDestino.DibujarVertice(g);
+                            adya.nDestino.DibujarArco(g);
                             if (destino != "")
                                 distancia += adya.peso;
 

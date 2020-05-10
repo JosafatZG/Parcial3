@@ -48,6 +48,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.nuevoVérticeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -200,13 +202,15 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.cmbinicio);
+            this.groupBox2.Controls.Add(this.listBox1);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(440, 460);
+            this.groupBox2.Location = new System.Drawing.Point(415, 460);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(324, 174);
+            this.groupBox2.Size = new System.Drawing.Size(497, 174);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Recorridos";
@@ -216,7 +220,7 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.Controls.Add(this.txtvertice);
-            this.groupBox3.Location = new System.Drawing.Point(822, 460);
+            this.groupBox3.Location = new System.Drawing.Point(943, 460);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(273, 174);
             this.groupBox3.TabIndex = 16;
@@ -229,14 +233,33 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoVérticeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(171, 28);
             // 
             // nuevoVérticeToolStripMenuItem
             // 
             this.nuevoVérticeToolStripMenuItem.Name = "nuevoVérticeToolStripMenuItem";
-            this.nuevoVérticeToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.nuevoVérticeToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.nuevoVérticeToolStripMenuItem.Text = "Nuevo Vértice";
             this.nuevoVérticeToolStripMenuItem.Click += new System.EventHandler(this.nuevoVérticeToolStripMenuItem_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(333, 34);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 132);
+            this.listBox1.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(330, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 17);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Ruta conectada:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Form1
             // 
@@ -282,6 +305,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem nuevoVérticeToolStripMenuItem;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label5;
     }
 }
 
