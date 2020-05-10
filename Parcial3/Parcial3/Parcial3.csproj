@@ -46,16 +46,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CArista.cs" />
+    <Compile Include="CGrafo.cs" />
+    <Compile Include="CLista.cs" />
+    <Compile Include="CVertice.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevaArista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaArista.Designer.cs">
+      <DependentUpon>NuevaArista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoVértice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoVértice.Designer.cs">
+      <DependentUpon>NuevoVértice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaArista.resx">
+      <DependentUpon>NuevaArista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoVértice.resx">
+      <DependentUpon>NuevoVértice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
